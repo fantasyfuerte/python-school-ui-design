@@ -62,7 +62,6 @@ export default async function CategoryPage({ params }: CategoryParams) {
               <CardFooter className="">
                 <Button
                   className="w-full bg-cta1 hover:bg-cta1/90 text-black "
-                  asChild
                 >
                   <Link href={`/challenges/${category}/${challenge.slug}`}>
                     Solve Challenge
