@@ -28,12 +28,12 @@ export default function Home() {
         </section>
         <section
           id="categories"
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 px-36"
         >
           {categories.map((category) => (
             <Card
               key={category.slug}
-              className="bg-white/10 backdrop-blur-sm border-none text-text1"
+              className="bg-white/10 backdrop-blur-sm border-none text-text1 h-80 flex flex-col justify-between"
             >
               <CardHeader>
                 <CardTitle className="text-2xl">{category.title}</CardTitle>
@@ -41,6 +41,7 @@ export default function Home() {
                   {category.description}
                 </CardDescription>
               </CardHeader>
+              <div>
               <CardContent>
                 <p className="text-text1">
                   {category.count} challenges available
@@ -56,6 +57,7 @@ export default function Home() {
                   </Link>
                 </Button>
               </CardFooter>
+              </div>
             </Card>
           ))}
         </section>
