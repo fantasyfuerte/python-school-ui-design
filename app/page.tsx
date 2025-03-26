@@ -22,7 +22,7 @@ export default function Home() {
             Enhance your Python skills by solving real-world coding challenges.
             Choose your difficulty level and start coding today!
           </p>
-          <Button className="mt-8 bg-[#ecba09] hover:bg-[#ecba09]/90 text-black font-bold px-8 py-6 text-lg">
+          <Button className="mt-8 bg-[#ecba09] hover:bg-[#ecba09]/90 text-backgroundgrey font-bold px-8 py-6 text-lg">
             <Link href="#categories">Start Coding Now</Link>
           </Button>
         </section>
@@ -49,7 +49,7 @@ export default function Home() {
               </CardContent>
               <CardFooter>
                 <Button
-                  className="w-full bg-cta1/15 hover:bg-cta1/30 text-text1 font-bold"
+                  className="w-full bg-text2 hover:bg-cta1 text-backgroundgrey font-bold"
                   asChild
                 >
                   <Link href={`/challenges/${category.slug}`}>
