@@ -8,7 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Header from "@/components/header";
 import { challengesByCategory, validCategories } from "@/lib/challeges-data";
 
 type CategoryParams = {
@@ -27,13 +26,10 @@ export default function CategoryPage({ params }: CategoryParams) {
   const challenges =
     challengesByCategory[category as keyof typeof challengesByCategory];
 
-  // Title case the category name
   const categoryTitle = category.charAt(0).toUpperCase() + category.slice(1);
 
   return (
     <main className="min-h-screen">
-      <Header />
-
       <div className="container mx-auto px-4 py-12">
         <div className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-[#d6ceaa]">

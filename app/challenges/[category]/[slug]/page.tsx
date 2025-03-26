@@ -1,12 +1,11 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { notFound } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import Header from "@/components/header"
-import { ChevronLeft, Code } from "lucide-react"
+import { useState } from "react";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { ChevronLeft, Code } from "lucide-react";
 
 // Mock data for challenges and solutions
 const challenges = {
@@ -14,7 +13,8 @@ const challenges = {
     "hello-world": {
       title: "Hello World",
       difficulty: "Easy",
-      description: "Write a Python program that prints 'Hello, World!' to the console.",
+      description:
+        "Write a Python program that prints 'Hello, World!' to the console.",
       hints: [
         "Use the print() function to output text to the console.",
         "Remember that strings in Python can be enclosed in single or double quotes.",
@@ -34,7 +34,8 @@ print("Hello, World!")
     "sum-two-numbers": {
       title: "Sum of Two Numbers",
       difficulty: "Easy",
-      description: "Write a Python program that takes two numbers as input and prints their sum.",
+      description:
+        "Write a Python program that takes two numbers as input and prints their sum.",
       hints: [
         "Use the input() function to get user input.",
         "Convert the input strings to integers using int().",
@@ -59,7 +60,8 @@ print(f"The sum of {num1} and {num2} is {sum}")
     "even-odd": {
       title: "Even or Odd",
       difficulty: "Easy",
-      description: "Write a Python program that determines whether a given number is even or odd.",
+      description:
+        "Write a Python program that determines whether a given number is even or odd.",
       hints: [
         "Use the modulo operator (%) to find the remainder when dividing by 2.",
         "If the remainder is 0, the number is even; otherwise, it's odd.",
@@ -79,7 +81,8 @@ else:
     "reverse-string": {
       title: "Reverse a String",
       difficulty: "Easy",
-      description: "Write a Python program that takes a string as input and returns the reverse of that string.",
+      description:
+        "Write a Python program that takes a string as input and returns the reverse of that string.",
       hints: [
         "You can use string slicing with a negative step to reverse a string.",
         "Alternatively, you can convert the string to a list, reverse it, and join it back.",
@@ -107,7 +110,8 @@ print(f"Reversed string (using loop): {reversed_text3}")
     "count-vowels": {
       title: "Count Vowels",
       difficulty: "Easy",
-      description: "Write a Python program that counts the number of vowels in a given string.",
+      description:
+        "Write a Python program that counts the number of vowels in a given string.",
       hints: [
         "Create a list or string containing all vowels (a, e, i, o, u).",
         "Iterate through each character in the input string and check if it's a vowel.",
@@ -554,30 +558,28 @@ if __name__ == "__main__":
 `,
     },
   },
-}
+};
 
 type ChallengeParams = {
   params: {
-    category: string
-    slug: string
-  }
-}
+    category: string;
+    slug: string;
+  };
+};
 
 export default function ChallengePage({ params }: ChallengeParams) {
-  const { category, slug } = params
-  const [showSolution, setShowSolution] = useState(false)
+  const { category, slug } = params;
+  const [showSolution, setShowSolution] = useState(false);
 
   // Check if the category and challenge exist
   if (!challenges[category] || !challenges[category][slug]) {
-    notFound()
+    notFound();
   }
 
-  const challenge = challenges[category][slug]
+  const challenge = challenges[category][slug];
 
   return (
     <main className="min-h-screen">
-      <Header />
-
       <div className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <Link
@@ -585,12 +587,15 @@ export default function ChallengePage({ params }: ChallengeParams) {
             className="inline-flex items-center text-[#a69a90] hover:text-[#d6ceaa] mb-4"
           >
             <ChevronLeft className="h-4 w-4 mr-1" />
-            Back to {category.charAt(0).toUpperCase() + category.slice(1)} Challenges
+            Back to {category.charAt(0).toUpperCase() + category.slice(1)}{" "}
+            Challenges
           </Link>
 
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-[#d6ceaa]">{challenge.title}</h1>
+              <h1 className="text-3xl font-bold text-[#d6ceaa]">
+                {challenge.title}
+              </h1>
               <div className="mt-2 inline-block px-2 py-1 rounded-md bg-white/10 text-sm text-[#a69a90]">
                 {challenge.difficulty}
               </div>
@@ -608,12 +613,16 @@ export default function ChallengePage({ params }: ChallengeParams) {
 
         <Card className="mb-8 bg-white/10 backdrop-blur-sm border-none">
           <div className="p-6">
-            <h2 className="text-xl font-semibold mb-4 text-[#d6ceaa]">Problem Description</h2>
+            <h2 className="text-xl font-semibold mb-4 text-[#d6ceaa]">
+              Problem Description
+            </h2>
             <p className="text-[#a69a90] mb-6">{challenge.description}</p>
 
             {challenge.hints && (
               <div>
-                <h3 className="text-lg font-semibold mb-2 text-[#d6ceaa]">Hints</h3>
+                <h3 className="text-lg font-semibold mb-2 text-[#d6ceaa]">
+                  Hints
+                </h3>
                 <ul className="list-disc pl-5 text-[#a69a90]">
                   {challenge.hints.map((hint, index) => (
                     <li key={index} className="mb-1">
@@ -629,7 +638,9 @@ export default function ChallengePage({ params }: ChallengeParams) {
         {showSolution && (
           <Card className="mb-8 bg-white/10 backdrop-blur-sm border-none">
             <div className="p-6">
-              <h2 className="text-xl font-semibold mb-4 text-[#d6ceaa]">Solution</h2>
+              <h2 className="text-xl font-semibold mb-4 text-[#d6ceaa]">
+                Solution
+              </h2>
               <div className="bg-gray-900 rounded-md p-4 overflow-x-auto">
                 <pre className="text-[#d6ceaa] whitespace-pre-wrap">
                   <code>{challenge.solution}</code>
@@ -640,6 +651,5 @@ export default function ChallengePage({ params }: ChallengeParams) {
         )}
       </div>
     </main>
-  )
+  );
 }
-
