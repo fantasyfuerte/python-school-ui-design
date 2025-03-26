@@ -9,7 +9,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "PythonPro Challenges",
   description: "Solve Python coding challenges and improve your skills",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
