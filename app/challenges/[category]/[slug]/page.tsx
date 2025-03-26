@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { use, useState } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -568,7 +568,7 @@ type ChallengeParams = {
 };
 
 export default function ChallengePage({ params }: ChallengeParams) {
-  const { category, slug } = params;
+  const { category, slug } = use(params);
   const [showSolution, setShowSolution] = useState(false);
 
   // Check if the category and challenge exist
