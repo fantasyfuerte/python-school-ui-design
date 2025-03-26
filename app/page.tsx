@@ -11,8 +11,6 @@ import {
 import { categories } from "@/lib/challeges-data";
 
 export default function Home() {
-  
-
   return (
     <main className="min-h-screen">
       <div className="container mx-auto px-4 py-12">
@@ -51,7 +49,7 @@ export default function Home() {
               </CardContent>
               <CardFooter>
                 <Button
-                  className="w-full bg-[#ecba09] hover:bg-[#ecba09]/90 text-black"
+                  className="w-full bg-cta1/15 hover:bg-cta1/30 text-text1 font-bold"
                   asChild
                 >
                   <Link href={`/challenges/${category.slug}`}>
