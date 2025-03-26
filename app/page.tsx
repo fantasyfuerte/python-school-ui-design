@@ -33,7 +33,7 @@ export default function Home() {
           {categories.map((category) => (
             <Card
               key={category.slug}
-              className="bg-white/10 backdrop-blur-sm border-none text-text1 h-72 flex flex-col justify-between"
+              className="bg-gradient-to-t from-backgroundblue/20 to-white/10 backdrop-blur-sm border-none text-text1 h-72 flex flex-col justify-between hover:scale-110 transition-transform duration-700"
             >
               <CardHeader>
                 <CardTitle className="text-2xl">{category.title}</CardTitle>
