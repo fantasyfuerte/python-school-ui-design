@@ -602,7 +602,7 @@ export default function ChallengePage({ params }: ChallengeParams) {
             </div>
 
             <Button
-              className="mt-4 md:mt-0 bg-[#ecba09] hover:bg-[#ecba09]/90 text-black"
+              className="mt-4 md:mt-0 bg-cta1 hover:bg-cta1/90 text-black"
               onClick={() => setShowSolution(!showSolution)}
             >
               <Code className="h-4 w-4 mr-2" />

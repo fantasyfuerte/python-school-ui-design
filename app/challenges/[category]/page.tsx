@@ -59,7 +59,7 @@ export default function CategoryPage({ params }: CategoryParams) {
               </CardContent>
               <CardFooter>
                 <Button
-                  className="w-full bg-[#ecba09] hover:bg-[#ecba09]/90 text-black"
+                  className="w-full bg-cta1 hover:bg-cta1/90 text-black"
                   asChild
                 >
                   <Link href={`/challenges/${category}/${challenge.slug}`}>

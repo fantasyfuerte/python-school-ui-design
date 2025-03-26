@@ -22,11 +22,10 @@ export default function Home() {
             Enhance your Python skills by solving real-world coding challenges.
             Choose your difficulty level and start coding today!
           </p>
-          <Button className="mt-8 bg-[#ecba09] hover:bg-[#ecba09]/90 text-backgroundgrey font-bold px-8 py-6 text-lg">
+          <Button className="mt-8 bg-cta1 hover:bg-cta1/90 text-backgroundgrey font-bold px-8 py-6 text-lg">
             <Link href="#categories">Start Coding Now</Link>
           </Button>
         </section>
-
         <section
           id="categories"
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
