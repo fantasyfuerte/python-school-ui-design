@@ -42,32 +42,31 @@ export default function Home() {
                 </CardDescription>
               </CardHeader>
               <div>
-              <CardContent>
-                <p className="text-text1">
-                  {category.count} challenges available
-                </p>
-              </CardContent>
-              <CardFooter>
-                <Button
-                  className="w-full bg-text2 hover:bg-cta1 text-backgroundgrey font-bold"
-                  asChild
-                >
-                  <Link href={`/challenges/${category.slug}`}>
-                    View Challenges
-                  </Link>
-                </Button>
-              </CardFooter>
+                <CardContent>
+                  <p className="text-text1">
+                    {category.count} challenges available
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <Button
+                    className="w-full bg-text2 hover:bg-cta1 text-backgroundgrey font-bold"
+                    asChild
+                  >
+                    <Link href={`/challenges/${category.slug}`}>
+                      View Challenges
+                    </Link>
+                  </Button>
+                </CardFooter>
               </div>
             </Card>
           ))}
         </section>
-
         <section className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-6 text-text1">
             Why Practice with Us?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 rounded-lg bg-white/5">
+            <article className="p-6 rounded-lg bg-white/5">
               <h3 className="text-xl font-semibold mb-3 text-text1">
                 Structured Learning
               </h3>
@@ -75,8 +74,8 @@ export default function Home() {
                 Progress from basic to advanced concepts with our carefully
                 curated challenges.
               </p>
-            </div>
-            <div className="p-6 rounded-lg bg-white/5">
+            </article>
+            <article className="p-6 rounded-lg bg-white/5">
               <h3 className="text-xl font-semibold mb-3 text-text1">
                 Detailed Solutions
               </h3>
@@ -84,8 +83,8 @@ export default function Home() {
                 Learn from comprehensive explanations and best practices in our
                 solutions.
               </p>
-            </div>
-            <div className="p-6 rounded-lg bg-white/5">
+            </article>
+            <article className="p-6 rounded-lg bg-white/5">
               <h3 className="text-xl font-semibold mb-3 text-text1">
                 Real-world Problems
               </h3>
@@ -93,7 +92,7 @@ export default function Home() {
                 Tackle challenges inspired by actual programming scenarios and
                 interviews.
               </p>
-            </div>
+            </article>
           </div>
         </section>
       </div>
