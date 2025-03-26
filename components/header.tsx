@@ -1,38 +1,46 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-black/20">
+    <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-backgroundgrey/20">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <div className="flex items-center gap-2">
+        <Link
+          href="/"
+          className="text-xl font-bold text-[#d6ceaa] flex items-center gap-2"
+        >
           <PythonLogo className="h-8 w-8" />
-          <Link href="/" className="text-xl font-bold text-[#d6ceaa]">
-            PythonPro Challenges
-          </Link>
-        </div>
+          Python School
+        </Link>
 
         <nav className="hidden md:flex items-center gap-6">
-          <Link href="/" className="text-[#a69a90] hover:text-[#d6ceaa] transition-colors">
+          <Link
+            href="/"
+            className="text-[#a69a90] hover:text-[#d6ceaa] transition-colors"
+          >
             Home
           </Link>
-          <Link href="/challenges/easy" className="text-[#a69a90] hover:text-[#d6ceaa] transition-colors">
+          <Link
+            href="/challenges/easy"
+            className="text-[#a69a90] hover:text-[#d6ceaa] transition-colors"
+          >
             Easy
           </Link>
-          <Link href="/challenges/medium" className="text-[#a69a90] hover:text-[#d6ceaa] transition-colors">
+          <Link
+            href="/challenges/medium"
+            className="text-[#a69a90] hover:text-[#d6ceaa] transition-colors"
+          >
             Medium
           </Link>
-          <Link href="/challenges/advanced" className="text-[#a69a90] hover:text-[#d6ceaa] transition-colors">
+          <Link
+            href="/challenges/advanced"
+            className="text-[#a69a90] hover:text-[#d6ceaa] transition-colors"
+          >
             Advanced
           </Link>
         </nav>
-
-        <div className="flex items-center gap-4">
-          <Button className="bg-[#ecba09] hover:bg-[#ecba09]/90 text-black">Sign In</Button>
-        </div>
       </div>
     </header>
-  )
+  );
 }
 
 function PythonLogo({ className }: { className?: string }) {
@@ -44,11 +52,23 @@ function PythonLogo({ className }: { className?: string }) {
       className={className}
     >
       <defs>
-        <linearGradient x1="12.959%" y1="12.039%" x2="79.639%" y2="78.201%" id="a">
+        <linearGradient
+          x1="12.959%"
+          y1="12.039%"
+          x2="79.639%"
+          y2="78.201%"
+          id="a"
+        >
           <stop stopColor="#387EB8" offset="0%" />
           <stop stopColor="#366994" offset="100%" />
         </linearGradient>
-        <linearGradient x1="19.128%" y1="20.579%" x2="90.742%" y2="88.429%" id="b">
+        <linearGradient
+          x1="19.128%"
+          y1="20.579%"
+          x2="90.742%"
+          y2="88.429%"
+          id="b"
+        >
           <stop stopColor="#FFE052" offset="0%" />
           <stop stopColor="#FFC331" offset="100%" />
         </linearGradient>
@@ -62,6 +82,5 @@ function PythonLogo({ className }: { className?: string }) {
         fill="url(#b)"
       />
     </svg>
-  )
+  );
 }
-
