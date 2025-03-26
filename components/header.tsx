@@ -6,7 +6,7 @@ export default function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link
           href="/"
-          className="text-xl font-bold text-[#d6ceaa] flex items-center gap-2"
+          className="text-xl font-bold text-text1 flex items-center gap-2"
         >
           <PythonLogo className="h-8 w-8" />
           Python School
