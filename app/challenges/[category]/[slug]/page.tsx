@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { use, useState } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -568,7 +568,7 @@ type ChallengeParams = {
 };
 
 export default function ChallengePage({ params }: ChallengeParams) {
-  const { category, slug } = params;
+  const { category, slug } = use(params);
   const [showSolution, setShowSolution] = useState(false);
 
   // Check if the category and challenge exist
@@ -602,7 +602,7 @@ export default function ChallengePage({ params }: ChallengeParams) {
             </div>
 
             <Button
-              className="mt-4 md:mt-0 bg-[#ecba09] hover:bg-[#ecba09]/90 text-black"
+              className="mt-4 md:mt-0 bg-cta1 hover:bg-cta1/90 text-black"
               onClick={() => setShowSolution(!showSolution)}
             >
               <Code className="h-4 w-4 mr-2" />
@@ -620,9 +620,7 @@ export default function ChallengePage({ params }: ChallengeParams) {
 
             {challenge.hints && (
               <div>
-                <h3 className="text-lg font-semibold mb-2 text-text1">
-                  Hints
-                </h3>
+                <h3 className="text-lg font-semibold mb-2 text-text1">Hints</h3>
                 <ul className="list-disc pl-5 text-text2">
                   {challenge.hints.map((hint, index) => (
                     <li key={index} className="mb-1">
@@ -643,7 +641,9 @@ export default function ChallengePage({ params }: ChallengeParams) {
               </h2>
               <div className="bg-gray-900 rounded-md p-4 overflow-x-auto">
                 <pre className="text-text1 whitespace-pre-wrap">
-                  <code>{challenge.solution}</code>
+                  <code className="select-text selection:bg-cta1/50">
+                    {challenge.solution}
+                  </code>
                 </pre>
               </div>
             </div>

@@ -22,19 +22,18 @@ export default function Home() {
             Enhance your Python skills by solving real-world coding challenges.
             Choose your difficulty level and start coding today!
           </p>
-          <Button className="mt-8 bg-[#ecba09] hover:bg-[#ecba09]/90 text-backgroundgrey font-bold px-8 py-6 text-lg">
+          <Button className="mt-8 bg-cta1 hover:bg-cta1/90 text-backgroundgrey font-bold px-8 py-6 text-lg">
             <Link href="#categories">Start Coding Now</Link>
           </Button>
         </section>
-
         <section
           id="categories"
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 px-36"
         >
           {categories.map((category) => (
             <Card
               key={category.slug}
-              className="bg-white/10 backdrop-blur-sm border-none text-text1"
+              className="bg-white/10 backdrop-blur-sm border-none text-text1 h-80 flex flex-col justify-between"
             >
               <CardHeader>
                 <CardTitle className="text-2xl">{category.title}</CardTitle>
@@ -42,31 +41,32 @@ export default function Home() {
                   {category.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-text1">
-                  {category.count} challenges available
-                </p>
-              </CardContent>
-              <CardFooter>
-                <Button
-                  className="w-full bg-text2 hover:bg-cta1 text-backgroundgrey font-bold"
-                  asChild
-                >
-                  <Link href={`/challenges/${category.slug}`}>
-                    View Challenges
-                  </Link>
-                </Button>
-              </CardFooter>
+              <div>
+                <CardContent>
+                  <p className="text-text1">
+                    {category.count} challenges available
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <Button
+                    className="w-full bg-text2 hover:bg-cta1 text-backgroundgrey font-bold"
+                    asChild
+                  >
+                    <Link href={`/challenges/${category.slug}`}>
+                      View Challenges
+                    </Link>
+                  </Button>
+                </CardFooter>
+              </div>
             </Card>
           ))}
         </section>
-
         <section className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-6 text-text1">
             Why Practice with Us?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 rounded-lg bg-white/5">
+            <article className="p-6 rounded-lg bg-white/5">
               <h3 className="text-xl font-semibold mb-3 text-text1">
                 Structured Learning
               </h3>
@@ -74,8 +74,8 @@ export default function Home() {
                 Progress from basic to advanced concepts with our carefully
                 curated challenges.
               </p>
-            </div>
-            <div className="p-6 rounded-lg bg-white/5">
+            </article>
+            <article className="p-6 rounded-lg bg-white/5">
               <h3 className="text-xl font-semibold mb-3 text-text1">
                 Detailed Solutions
               </h3>
@@ -83,8 +83,8 @@ export default function Home() {
                 Learn from comprehensive explanations and best practices in our
                 solutions.
               </p>
-            </div>
-            <div className="p-6 rounded-lg bg-white/5">
+            </article>
+            <article className="p-6 rounded-lg bg-white/5">
               <h3 className="text-xl font-semibold mb-3 text-text1">
                 Real-world Problems
               </h3>
@@ -92,17 +92,14 @@ export default function Home() {
                 Tackle challenges inspired by actual programming scenarios and
                 interviews.
               </p>
-            </div>
+            </article>
           </div>
         </section>
       </div>
 
       <footer className="py-8 text-center text-text2 border-t border-white/10">
-        <div className="container mx-auto">
-          <p>
-            © {new Date().getFullYear()} PythonPro Challenges. All rights
-            reserved.
-          </p>
+        <div className="">
+          <p>© 2025 Fuerte. All rights reserved.</p>
         </div>
       </footer>
     </main>
