@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <div className="container mx-auto px-4 py-12">
-        <section className="mb-16 text-center">
+        <section className="mb-16 mt-5 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-text1">
             Master Python Through Practice
           </h1>
@@ -28,12 +28,12 @@ export default function Home() {
         </section>
         <section
           id="categories"
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 px-36"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 px-36"
         >
           {categories.map((category) => (
             <Card
               key={category.slug}
-              className="bg-white/10 backdrop-blur-sm border-none text-text1 h-80 flex flex-col justify-between"
+              className="bg-white/10 backdrop-blur-sm border-none text-text1 h-72 flex flex-col justify-between"
             >
               <CardHeader>
                 <CardTitle className="text-2xl">{category.title}</CardTitle>
