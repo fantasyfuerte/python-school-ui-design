@@ -98,11 +98,8 @@ export default function Home() {
       </div>
 
       <footer className="py-8 text-center text-text2 border-t border-white/10">
-        <div className="container mx-auto">
-          <p>
-            © {new Date().getFullYear()} PythonPro Challenges. All rights
-            reserved.
-          </p>
+        <div className="">
+          <p>© 2025 Fuerte. All rights reserved.</p>
         </div>
       </footer>
     </main>
