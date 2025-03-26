@@ -1,5 +1,7 @@
 export const validCategories = ["easy", "medium", "advanced"]
 
+
+
 export const challengesByCategory = {
   easy: [
     { id: 1, title: "Hello World", description: "Write your first Python program", slug: "hello-world" },
@@ -68,3 +70,26 @@ export const challengesByCategory = {
     },
   ],
 }
+
+export const categories = [
+  {
+    title: "Easy",
+    description:
+      "Perfect for beginners. Simple problems to build your foundation.",
+    count: challengesByCategory.easy.length,
+    slug: "easy",
+  },
+  {
+    title: "Medium",
+    description:
+      "For intermediate programmers. Challenges that require deeper thinking.",
+    count: challengesByCategory.medium.length,
+    slug: "medium",
+  },
+  {
+    title: "Advanced",
+    description: "Complex problems for experienced Python developers.",
+    count: challengesByCategory.advanced.length,
+    slug: "advanced",
+  },
+];

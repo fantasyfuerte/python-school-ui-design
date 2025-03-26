@@ -8,30 +8,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { categories } from "@/lib/challeges-data";
 
 export default function Home() {
-  const categories = [
-    {
-      title: "Easy",
-      description:
-        "Perfect for beginners. Simple problems to build your foundation.",
-      count: 15,
-      slug: "easy",
-    },
-    {
-      title: "Medium",
-      description:
-        "For intermediate programmers. Challenges that require deeper thinking.",
-      count: 25,
-      slug: "medium",
-    },
-    {
-      title: "Advanced",
-      description: "Complex problems for experienced Python developers.",
-      count: 10,
-      slug: "advanced",
-    },
-  ];
+  
 
   return (
     <main className="min-h-screen">
