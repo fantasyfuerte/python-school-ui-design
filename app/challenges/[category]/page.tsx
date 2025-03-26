@@ -16,8 +16,8 @@ type CategoryParams = {
   };
 };
 
-export default function CategoryPage({ params }: CategoryParams) {
-  const { category } = params;
+export default async function CategoryPage({ params }: CategoryParams) {
+  const { category } = await params;
 
   if (!validCategories.includes(category)) {
     notFound();
