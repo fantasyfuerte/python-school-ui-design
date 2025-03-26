@@ -620,9 +620,7 @@ export default function ChallengePage({ params }: ChallengeParams) {
 
             {challenge.hints && (
               <div>
-                <h3 className="text-lg font-semibold mb-2 text-text1">
-                  Hints
-                </h3>
+                <h3 className="text-lg font-semibold mb-2 text-text1">Hints</h3>
                 <ul className="list-disc pl-5 text-text2">
                   {challenge.hints.map((hint, index) => (
                     <li key={index} className="mb-1">
@@ -643,7 +641,9 @@ export default function ChallengePage({ params }: ChallengeParams) {
               </h2>
               <div className="bg-gray-900 rounded-md p-4 overflow-x-auto">
                 <pre className="text-text1 whitespace-pre-wrap">
-                  <code>{challenge.solution}</code>
+                  <code className="select-text selection:bg-cta1/50">
+                    {challenge.solution}
+                  </code>
                 </pre>
               </div>
             </div>
