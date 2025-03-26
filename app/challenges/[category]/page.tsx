@@ -49,17 +49,19 @@ export default async function CategoryPage({ params }: CategoryParams) {
           {challenges.map((challenge) => (
             <Card
               key={challenge.id}
-              className="bg-white/10 backdrop-blur-sm border-none text-text1"
+              className="bg-white/10 backdrop-blur-sm border-none text-text1 flex flex-col justify-between"
             >
-              <CardHeader>
-                <CardTitle>{challenge.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-text2">{challenge.description}</p>
-              </CardContent>
-              <CardFooter>
+              <div>
+                <CardHeader>
+                  <CardTitle>{challenge.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-text2">{challenge.description}</p>
+                </CardContent>
+              </div>
+              <CardFooter className="">
                 <Button
-                  className="w-full bg-cta1 hover:bg-cta1/90 text-black"
+                  className="w-full bg-cta1 hover:bg-cta1/90 text-black "
                   asChild
                 >
                   <Link href={`/challenges/${category}/${challenge.slug}`}>
