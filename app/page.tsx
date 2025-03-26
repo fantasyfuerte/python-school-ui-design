@@ -28,12 +28,12 @@ export default function Home() {
         </section>
         <section
           id="categories"
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 px-36"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 md:px-36"
         >
           {categories.map((category) => (
             <Card
               key={category.slug}
-              className="bg-gradient-to-t from-backgroundblue/20 to-white/10 backdrop-blur-sm border-none text-text1 h-72 flex flex-col justify-between hover:scale-110 transition-transform duration-700"
+              className="bg-gradient-to-t from-backgroundblue/20 to-white/10 backdrop-blur-sm border-none text-text1 md:h-72 flex flex-col justify-between md:hover:scale-110 transition-transform duration-700"
             >
               <CardHeader>
                 <CardTitle className="text-2xl">{category.title}</CardTitle>
@@ -63,7 +63,7 @@ export default function Home() {
         </section>
         <section className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-6 text-text1">
-            Why Practice with Us?
+            Why Python School?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <article className="p-6 rounded-lg bg-white/5">
