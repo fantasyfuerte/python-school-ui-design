@@ -32,10 +32,10 @@ export default function CategoryPage({ params }: CategoryParams) {
     <main className="min-h-screen">
       <div className="container mx-auto px-4 py-12">
         <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-[#d6ceaa]">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-text1">
             {categoryTitle} Challenges
           </h1>
-          <p className="text-[#a69a90]">
+          <p className="text-text2">
             {category === "easy" &&
               "Perfect for beginners. Build your Python foundation with these simple problems."}
             {category === "medium" &&
@@ -49,13 +49,13 @@ export default function CategoryPage({ params }: CategoryParams) {
           {challenges.map((challenge) => (
             <Card
               key={challenge.id}
-              className="bg-white/10 backdrop-blur-sm border-none text-[#d6ceaa]"
+              className="bg-white/10 backdrop-blur-sm border-none text-text1"
             >
               <CardHeader>
                 <CardTitle>{challenge.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-[#a69a90]">{challenge.description}</p>
+                <p className="text-text2">{challenge.description}</p>
               </CardContent>
               <CardFooter>
                 <Button

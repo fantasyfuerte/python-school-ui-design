@@ -584,7 +584,7 @@ export default function ChallengePage({ params }: ChallengeParams) {
         <div className="mb-6">
           <Link
             href={`/challenges/${category}`}
-            className="inline-flex items-center text-[#a69a90] hover:text-[#d6ceaa] mb-4"
+            className="inline-flex items-center text-text2 hover:text-text1 mb-4"
           >
             <ChevronLeft className="h-4 w-4 mr-1" />
             Back to {category.charAt(0).toUpperCase() + category.slice(1)}{" "}
@@ -593,10 +593,10 @@ export default function ChallengePage({ params }: ChallengeParams) {
 
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-[#d6ceaa]">
+              <h1 className="text-3xl font-bold text-text1">
                 {challenge.title}
               </h1>
-              <div className="mt-2 inline-block px-2 py-1 rounded-md bg-white/10 text-sm text-[#a69a90]">
+              <div className="mt-2 inline-block px-2 py-1 rounded-md bg-white/10 text-sm text-text2">
                 {challenge.difficulty}
               </div>
             </div>
@@ -613,17 +613,17 @@ export default function ChallengePage({ params }: ChallengeParams) {
 
         <Card className="mb-8 bg-white/10 backdrop-blur-sm border-none">
           <div className="p-6">
-            <h2 className="text-xl font-semibold mb-4 text-[#d6ceaa]">
+            <h2 className="text-xl font-semibold mb-4 text-text1">
               Problem Description
             </h2>
-            <p className="text-[#a69a90] mb-6">{challenge.description}</p>
+            <p className="text-text2 mb-6">{challenge.description}</p>
 
             {challenge.hints && (
               <div>
-                <h3 className="text-lg font-semibold mb-2 text-[#d6ceaa]">
+                <h3 className="text-lg font-semibold mb-2 text-text1">
                   Hints
                 </h3>
-                <ul className="list-disc pl-5 text-[#a69a90]">
+                <ul className="list-disc pl-5 text-text2">
                   {challenge.hints.map((hint, index) => (
                     <li key={index} className="mb-1">
                       {hint}
@@ -638,11 +638,11 @@ export default function ChallengePage({ params }: ChallengeParams) {
         {showSolution && (
           <Card className="mb-8 bg-white/10 backdrop-blur-sm border-none">
             <div className="p-6">
-              <h2 className="text-xl font-semibold mb-4 text-[#d6ceaa]">
+              <h2 className="text-xl font-semibold mb-4 text-text1">
                 Solution
               </h2>
               <div className="bg-gray-900 rounded-md p-4 overflow-x-auto">
-                <pre className="text-[#d6ceaa] whitespace-pre-wrap">
+                <pre className="text-text1 whitespace-pre-wrap">
                   <code>{challenge.solution}</code>
                 </pre>
               </div>

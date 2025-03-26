@@ -17,10 +17,10 @@ export default function Home() {
     <main className="min-h-screen">
       <div className="container mx-auto px-4 py-12">
         <section className="mb-16 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#d6ceaa]">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-text1">
             Master Python Through Practice
           </h1>
-          <p className="text-xl text-[#a69a90] max-w-3xl mx-auto">
+          <p className="text-xl text-text2 max-w-3xl mx-auto">
             Enhance your Python skills by solving real-world coding challenges.
             Choose your difficulty level and start coding today!
           </p>
@@ -36,16 +36,16 @@ export default function Home() {
           {categories.map((category) => (
             <Card
               key={category.slug}
-              className="bg-white/10 backdrop-blur-sm border-none text-[#d6ceaa]"
+              className="bg-white/10 backdrop-blur-sm border-none text-text1"
             >
               <CardHeader>
                 <CardTitle className="text-2xl">{category.title}</CardTitle>
-                <CardDescription className="text-[#a69a90]">
+                <CardDescription className="text-text2">
                   {category.description}
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-[#d6ceaa]">
+                <p className="text-text1">
                   {category.count} challenges available
                 </p>
               </CardContent>
@@ -64,33 +64,33 @@ export default function Home() {
         </section>
 
         <section className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-[#d6ceaa]">
+          <h2 className="text-3xl font-bold mb-6 text-text1">
             Why Practice with Us?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 rounded-lg bg-white/5">
-              <h3 className="text-xl font-semibold mb-3 text-[#d6ceaa]">
+              <h3 className="text-xl font-semibold mb-3 text-text1">
                 Structured Learning
               </h3>
-              <p className="text-[#a69a90]">
+              <p className="text-text2">
                 Progress from basic to advanced concepts with our carefully
                 curated challenges.
               </p>
             </div>
             <div className="p-6 rounded-lg bg-white/5">
-              <h3 className="text-xl font-semibold mb-3 text-[#d6ceaa]">
+              <h3 className="text-xl font-semibold mb-3 text-text1">
                 Detailed Solutions
               </h3>
-              <p className="text-[#a69a90]">
+              <p className="text-text2">
                 Learn from comprehensive explanations and best practices in our
                 solutions.
               </p>
             </div>
             <div className="p-6 rounded-lg bg-white/5">
-              <h3 className="text-xl font-semibold mb-3 text-[#d6ceaa]">
+              <h3 className="text-xl font-semibold mb-3 text-text1">
                 Real-world Problems
               </h3>
-              <p className="text-[#a69a90]">
+              <p className="text-text2">
                 Tackle challenges inspired by actual programming scenarios and
                 interviews.
               </p>
@@ -99,7 +99,7 @@ export default function Home() {
         </section>
       </div>
 
-      <footer className="py-8 text-center text-[#a69a90] border-t border-white/10">
+      <footer className="py-8 text-center text-text2 border-t border-white/10">
         <div className="container mx-auto">
           <p>
             © {new Date().getFullYear()} PythonPro Challenges. All rights
