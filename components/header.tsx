@@ -11,29 +11,28 @@ export default function Header() {
           <PythonLogo className="h-8 w-8" />
           Python School
         </Link>
-
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden sm:flex items-center gap-6">
           <Link
             href="/"
-            className="text-[#a69a90] hover:text-[#d6ceaa] transition-colors"
+            className="text-text2 hover:text-text1 transition-colors"
           >
             Home
           </Link>
           <Link
             href="/challenges/easy"
-            className="text-[#a69a90] hover:text-[#d6ceaa] transition-colors"
+            className="text-text2 hover:text-text1 transition-colors"
           >
             Easy
           </Link>
           <Link
             href="/challenges/medium"
-            className="text-[#a69a90] hover:text-[#d6ceaa] transition-colors"
+            className="text-text2 hover:text-text1 transition-colors"
           >
             Medium
           </Link>
           <Link
             href="/challenges/advanced"
-            className="text-[#a69a90] hover:text-[#d6ceaa] transition-colors"
+            className="text-text2 hover:text-text1 transition-colors"
           >
             Advanced
           </Link>
