@@ -60,11 +60,11 @@ export default async function CategoryPage({ params }: CategoryParams) {
                 </CardContent>
               </div>
               <CardFooter className="">
-                <Button className="w-full bg-cta1 hover:bg-cta1/90 text-black ">
-                  <Link href={`/challenges/${category}/${challenge.slug}`}>
+                <Link href={`/challenges/${category}/${challenge.slug}`}>
+                  <Button className="w-full bg-cta1 hover:bg-cta1/90 text-black ">
                     Solve Challenge
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}

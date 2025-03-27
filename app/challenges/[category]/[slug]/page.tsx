@@ -9,10 +9,12 @@ import { ChevronLeft, Code } from "lucide-react";
 import { challenges } from "@/lib/challenges";
 
 type ChallengeParams = {
-  params: {
-    category: string;
-    slug: string;
-  };
+  params: Params;
+};
+
+type Params = {
+  category: string;
+  slug: string;
 };
 
 export default function ChallengePage({ params }: ChallengeParams) {
