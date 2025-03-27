@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronLeft, Code } from "lucide-react";
 import { challenges } from "@/lib/challenges";
+import { validCategories } from "@/lib/challeges-data";
 
 export default function ChallengePage() {
   const url = usePathname().split("/");
@@ -15,8 +16,9 @@ export default function ChallengePage() {
 
   const [showSolution, setShowSolution] = useState(false);
 
-  if (!challenges[category] || !challenges[category][slug]) {
+  if (!validCategories.includes(category)) {
     notFound();
+  } else {
   }
 
   const challenge = challenges[category][slug];
