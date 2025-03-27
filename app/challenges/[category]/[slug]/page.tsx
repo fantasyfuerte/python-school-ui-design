@@ -1,28 +1,24 @@
 "use client";
 
-import { use, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronLeft, Code } from "lucide-react";
 import { challenges } from "@/lib/challenges";
+import { validCategories } from "@/lib/challeges-data";
 
-type ChallengeParams = {
-  params: Params;
-};
+export default function ChallengePage() {
+  const url = usePathname().split("/");
+  const category = url[2];
+  const slug = url[3];
 
-type Params = {
-  category: string;
-  slug: string;
-};
-
-export default function ChallengePage({ params }: ChallengeParams) {
-  const { category, slug } = use(params);
   const [showSolution, setShowSolution] = useState(false);
 
-  if (!challenges[category] || !challenges[category][slug]) {
+  if (!validCategories.includes(category)) {
     notFound();
+  } else {
   }
 
   const challenge = challenges[category][slug];
