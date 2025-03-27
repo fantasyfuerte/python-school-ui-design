@@ -30,8 +30,8 @@ export default async function CategoryPage({ params }: CategoryParams) {
 
   return (
     <main className="min-h-screen">
-      <div className="container mx-auto px-4 py-12">
-        <div className="mb-8">
+      <section className="container mx-auto px-4 py-12">
+        <article className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-text1">
             {categoryTitle} Challenges
           </h1>
@@ -43,9 +43,9 @@ export default async function CategoryPage({ params }: CategoryParams) {
             {category === "advanced" &&
               "Complex problems for experienced Python developers. Test your advanced programming knowledge."}
           </p>
-        </div>
+        </article>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {challenges.map((challenge) => (
             <Card
               key={challenge.id}
@@ -60,9 +60,7 @@ export default async function CategoryPage({ params }: CategoryParams) {
                 </CardContent>
               </div>
               <CardFooter className="">
-                <Button
-                  className="w-full bg-cta1 hover:bg-cta1/90 text-black "
-                >
+                <Button className="w-full bg-cta1 hover:bg-cta1/90 text-black ">
                   <Link href={`/challenges/${category}/${challenge.slug}`}>
                     Solve Challenge
                   </Link>
@@ -70,8 +68,8 @@ export default async function CategoryPage({ params }: CategoryParams) {
               </CardFooter>
             </Card>
           ))}
-        </div>
-      </div>
+        </article>
+      </section>
     </main>
   );
 }

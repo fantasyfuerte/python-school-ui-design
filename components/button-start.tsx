@@ -3,8 +3,10 @@
 import { Button } from "./ui/button";
 
 function Scroll() {
+  const scrollTo = window.innerWidth < 768 ? 400 : 300;
+
   window.scrollTo({
-    top: 400,
+    top: scrollTo,
     behavior: "smooth",
   });
 }
