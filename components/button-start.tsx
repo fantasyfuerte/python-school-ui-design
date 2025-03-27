@@ -3,19 +3,12 @@
 import { Button } from "./ui/button";
 
 function Scroll() {
-  // different scroll to different screen sizes
+  const scrollTo = window.innerWidth < 768 ? 400 : 300;
 
-  if (window.innerWidth < 768) {
-    window.scrollTo({
-      top: 400,
-      behavior: "smooth",
-    });
-  } else {
-    window.scrollTo({
-      top: 300,
-      behavior: "smooth",
-    });
-  }
+  window.scrollTo({
+    top: scrollTo,
+    behavior: "smooth",
+  });
 }
 
 function ButtonStart() {
