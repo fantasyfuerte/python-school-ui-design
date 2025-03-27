@@ -18,7 +18,7 @@ type Params = {
 };
 
 export default function ChallengePage({ params }: ChallengeParams) {
-  const { category, slug }: Params = use(params);
+  const { category, slug } = use(params);
   const [showSolution, setShowSolution] = useState(false);
 
   if (!challenges[category] || !challenges[category][slug]) {
