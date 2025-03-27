@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { categories } from "@/lib/challeges-data";
+import ButtonStart from "@/components/button-start";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
             Enhance your Python skills by solving real-world coding challenges.
             Choose your difficulty level and start coding today!
           </p>
+          <ButtonStart />
         </section>
         <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 md:px-36">
           {categories.map((category) => (
