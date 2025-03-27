@@ -9,6 +9,14 @@ import { ChevronLeft, Code } from "lucide-react";
 import { challenges } from "@/lib/challenges";
 import { validCategories } from "@/lib/challeges-data";
 
+type Challenge = {
+  title: string;
+  difficulty: string;
+  description: string;
+  hints: string[];
+  solution: string;
+};
+
 export default function ChallengePage() {
   const url = usePathname().split("/");
   const category = url[2];
@@ -18,10 +26,11 @@ export default function ChallengePage() {
 
   if (!validCategories.includes(category)) {
     notFound();
-  } else {
   }
 
-  const challenge = challenges[category][slug];
+  const Category = challenges[category];
+
+  const challenge = Category[slug] as Challenge;
 
   return (
     <main className="min-h-screen">
