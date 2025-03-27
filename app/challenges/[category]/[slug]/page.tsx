@@ -2,7 +2,7 @@
 
 import { use, useState } from "react";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronLeft, Code } from "lucide-react";
@@ -17,8 +17,11 @@ type Params = {
   slug: string;
 };
 
-export default function ChallengePage({ params }: ChallengeParams) {
-  const { category, slug } = use(params);
+export default function ChallengePage() {
+  const url = usePathname().split("/");
+  const category = url[2];
+  const slug = url[3];
+
   const [showSolution, setShowSolution] = useState(false);
 
   if (!challenges[category] || !challenges[category][slug]) {
