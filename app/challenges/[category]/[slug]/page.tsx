@@ -8,8 +8,6 @@ import { Card } from "@/components/ui/card";
 import { ChevronLeft, Code } from "lucide-react";
 import { challenges } from "@/lib/challenges";
 
-// Mock data for challenges and solutions
-
 type ChallengeParams = {
   params: {
     category: string;
@@ -21,7 +19,6 @@ export default function ChallengePage({ params }: ChallengeParams) {
   const { category, slug } = use(params);
   const [showSolution, setShowSolution] = useState(false);
 
-  // Check if the category and challenge exist
   if (!challenges[category] || !challenges[category][slug]) {
     notFound();
   }
