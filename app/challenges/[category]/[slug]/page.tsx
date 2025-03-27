@@ -1,21 +1,12 @@
 "use client";
 
-import { use, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { notFound, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronLeft, Code } from "lucide-react";
 import { challenges } from "@/lib/challenges";
-
-type ChallengeParams = {
-  params: Params;
-};
-
-type Params = {
-  category: string;
-  slug: string;
-};
 
 export default function ChallengePage() {
   const url = usePathname().split("/");
