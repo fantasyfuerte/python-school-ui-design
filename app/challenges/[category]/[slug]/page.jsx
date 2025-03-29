@@ -9,13 +9,13 @@ import { ChevronLeft, Code } from "lucide-react";
 import { challenges } from "@/lib/challenges";
 import { validCategories } from "@/lib/challeges-data";
 
-type Challenge = {
-  title: string;
-  difficulty: string;
-  description: string;
-  hints: string[];
-  solution: string;
-};
+// type Challenge = {
+//   title: string;
+//   difficulty: string;
+//   description: string;
+//   hints: string[];
+//   solution: string;
+// };
 
 export default function ChallengePage() {
   const url = usePathname().split("/");
@@ -30,7 +30,7 @@ export default function ChallengePage() {
 
   const Category = challenges[category];
 
-  const challenge = Category[slug] as Challenge;
+  const challenge = Category[slug];
 
   return (
     <main className="min-h-screen">
