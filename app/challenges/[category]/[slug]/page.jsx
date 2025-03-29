@@ -44,7 +44,6 @@ export default function ChallengePage() {
             Back to {category.charAt(0).toUpperCase() + category.slice(1)}{" "}
             Challenges
           </Link>
-
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div>
               <h1 className="text-3xl font-bold text-text1">
