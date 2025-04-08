@@ -85,7 +85,7 @@ export default function ChallengePage() {
                 Solution
               </h2>
               <div className="w-screen overflow-x-auto">
-                <pre className="text-text1 whitespace-pre-wrap w-screen overflow-x-scroll">
+                <pre className="text-text1 whitespace-break-spaces breakwords overflow-x-scroll">
                   <code className="select-text selection:bg-cta1/50">
                     {challenge.solution}
                   </code>
