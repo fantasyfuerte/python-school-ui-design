@@ -9,14 +9,6 @@ import { ChevronLeft, Code } from "lucide-react";
 import { challenges } from "@/lib/challenges";
 import { validCategories } from "@/lib/challeges-data";
 
-// type Challenge = {
-//   title: string;
-//   difficulty: string;
-//   description: string;
-//   hints: string[];
-//   solution: string;
-// };
-
 export default function ChallengePage() {
   const url = usePathname().split("/");
   const category = url[2];
@@ -92,8 +84,8 @@ export default function ChallengePage() {
               <h2 className="text-xl font-semibold mb-4 text-text1">
                 Solution
               </h2>
-              <div className="bg-gray-900 rounded-md p-4 overflow-x-auto">
-                <pre className="text-text1 whitespace-pre-wrap">
+              <div className="w-screen overflow-x-auto">
+                <pre className="text-text1 whitespace-pre-wrap w-screen overflow-x-scroll">
                   <code className="select-text selection:bg-cta1/50">
                     {challenge.solution}
                   </code>
