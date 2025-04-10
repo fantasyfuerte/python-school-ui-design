@@ -32,8 +32,8 @@ export default function ChallengePage() {
   const challenge = Category[slug] as Challenge;
 
   return (
-    <main className="min-h-screen">
-      <div className="container px-4 py-8">
+    <main className="">
+      <div className="contain px-4 py-8">
         <div className="mb-6">
           <Link
             href={`/challenges/${category}`}
@@ -44,10 +44,14 @@ export default function ChallengePage() {
             Challenges
           </Link>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-            <h1 className="text-3xl font-bold text-text1">{challenge.title}</h1>
-            <p className="mt-2 px-2 py-1 rounded-md bg-white/10 text-sm text-text2 w-fit">
-              {challenge.difficulty}
-            </p>
+            <div>
+              <h1 className="text-3xl font-bold text-text1">
+                {challenge.title}
+              </h1>
+              <p className="mt-2 px-2 py-1 rounded-md bg-white/10 text-sm text-text2 w-fit">
+                {challenge.difficulty}
+              </p>
+            </div>
 
             <Button
               className="mt-4 md:mt-0 bg-cta1 hover:bg-cta1/90 text-black"
@@ -87,8 +91,8 @@ export default function ChallengePage() {
               <h2 className="text-xl font-semibold mb-4 text-text1">
                 Solution
               </h2>
-              <div className="w-screen overflow-x-auto">
-                <pre className="text-text1 whitespace-break-spaces break-words overflow-x-scroll">
+              <div className="overflow-x-scroll">
+                <pre className="text-text1 whitespace-break-spaces overflow-x-scroll">
                   <code className="select-text selection:bg-cta1/50">
                     {challenge.solution}
                   </code>
