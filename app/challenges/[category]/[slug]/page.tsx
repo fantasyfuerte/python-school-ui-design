@@ -91,13 +91,11 @@ export default function ChallengePage() {
               <h2 className="text-xl font-semibold mb-4 text-text1">
                 Solution
               </h2>
-              <div className="overflow-x-scroll">
-                <pre className="text-text1 whitespace-break-spaces overflow-x-scroll">
-                  <code className="select-text selection:bg-cta1/50">
-                    {challenge.solution}
-                  </code>
-                </pre>
-              </div>
+              <pre className="text-text1 overflow-x-scroll">
+                <code className="select-text selection:bg-cta1/50">
+                  {challenge.solution}
+                </code>
+              </pre>
             </div>
           </Card>
         )}
