@@ -25,7 +25,7 @@ export default function Home() {
           </p>
           <ButtonStart />
         </section>
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 md:px-36">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 md:px-10 lg:px-36">
           {categories.map((category) => (
             <Card
               key={category.slug}
