@@ -9,9 +9,17 @@ import { ChevronLeft, Code } from "lucide-react";
 import { challenges } from "@/lib/challenges";
 import { validCategories } from "@/lib/challeges-data";
 
+interface Challenge {
+  title: string;
+  difficulty: string;
+  description: string;
+  hints?: string[];
+  solution: string;
+}
+
 export default function ChallengePage() {
   const url = usePathname().split("/");
-  const category = url[2];
+  const category = url[2] as keyof typeof challenges;
   const slug = url[3];
 
   const [showSolution, setShowSolution] = useState(false);
@@ -20,9 +28,8 @@ export default function ChallengePage() {
     notFound();
   }
 
-  const Category = challenges[category];
-
-  const challenge = Category[slug];
+  const Category = challenges[category] as { [key: string]: Challenge };
+  const challenge = Category[slug] as Challenge;
 
   return (
     <main className="min-h-screen">
@@ -37,11 +44,9 @@ export default function ChallengePage() {
             Challenges
           </Link>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-              <h1 className="text-3xl font-bold text-text1">
-                {challenge.title}
-              </h1>
-              <p className="mt-2 inline-block px-2 py-1 rounded-md bg-white/10 text-sm text-text2">
-                {challenge.difficulty}
+            <h1 className="text-3xl font-bold text-text1">{challenge.title}</h1>
+            <p className="mt-2 px-2 py-1 rounded-md bg-white/10 text-sm text-text2 w-fit">
+              {challenge.difficulty}
             </p>
 
             <Button
