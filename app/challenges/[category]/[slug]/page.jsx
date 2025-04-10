@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
+import { useState } from "react";
 import { notFound, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -26,7 +26,7 @@ export default function ChallengePage() {
 
   return (
     <main className="min-h-screen">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container px-4 py-8">
         <div className="mb-6">
           <Link
             href={`/challenges/${category}`}
@@ -37,14 +37,12 @@ export default function ChallengePage() {
             Challenges
           </Link>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-            <div>
               <h1 className="text-3xl font-bold text-text1">
                 {challenge.title}
               </h1>
-              <div className="mt-2 inline-block px-2 py-1 rounded-md bg-white/10 text-sm text-text2">
+              <p className="mt-2 inline-block px-2 py-1 rounded-md bg-white/10 text-sm text-text2">
                 {challenge.difficulty}
-              </div>
-            </div>
+            </p>
 
             <Button
               className="mt-4 md:mt-0 bg-cta1 hover:bg-cta1/90 text-black"
@@ -85,7 +83,7 @@ export default function ChallengePage() {
                 Solution
               </h2>
               <div className="w-screen overflow-x-auto">
-                <pre className="text-text1 whitespace-break-spaces breakwords overflow-x-scroll">
+                <pre className="text-text1 whitespace-break-spaces break-words overflow-x-scroll">
                   <code className="select-text selection:bg-cta1/50">
                     {challenge.solution}
                   </code>

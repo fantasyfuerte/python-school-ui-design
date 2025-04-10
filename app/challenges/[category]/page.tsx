@@ -30,7 +30,7 @@ export default async function CategoryPage({ params }: CategoryParams) {
 
   return (
     <main className="min-h-screen">
-      <section className="container mx-auto px-4 py-12">
+      <section className="container px-4 py-12">
         <article className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-text1">
             {categoryTitle} Challenges
