@@ -14,7 +14,7 @@ import ButtonStart from "@/components/button-start";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <div className="container mx-auto px-4 max-w-[1280px] py-12">
+      <div className="container px-4 py-12">
         <section className="mb-16 mt-5 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-text1">
             Master Python Through Practice
