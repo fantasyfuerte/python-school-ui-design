@@ -19,10 +19,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-backgroundgrey`}>
         <div className="min-h-screen bg-gradient-to-br from-backgroundgrey to-backgroundblue select-none">
-          <div className="max-w-[1280px] mx-auto">
-            <Header />
-            {children}
-          </div>
+          <Header />
+          <div className="max-w-[1280px] mx-auto">{children}</div>
         </div>
       </body>
     </html>
