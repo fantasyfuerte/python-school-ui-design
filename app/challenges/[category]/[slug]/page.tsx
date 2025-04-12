@@ -11,10 +11,10 @@ import { validCategories } from "@/lib/challeges-data";
 
 interface Challenge {
   title: string;
-  difficulty: string;
   description: string;
-  hints?: string[];
+  difficulty: string;
   solution: string;
+  hints: string[];
 }
 
 export default function ChallengePage() {
